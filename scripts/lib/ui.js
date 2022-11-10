@@ -80,10 +80,7 @@ export function createSearchResult(book) {
       : (authorString += `${author}, `);
   });
 
-  console.log(book);
-  console.log(book.publish_year);
   const publishDate = book?.first_publish_year
-  console.log(publishDate);
   const authorP = el("p", {}, "Eftir " + authorString);
   const utgefinP = el("p", {}, "Fyrst útgefin " + publishDate);
 
@@ -206,7 +203,6 @@ export async function searchAndRender(main, searchForm, query) {
   setLoading(main, searchForm);
 
   const books = await searchBooks(query);
-  console.log(books)
 
 
   setNotLoading(main, searchForm);
