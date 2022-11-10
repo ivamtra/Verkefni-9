@@ -48,7 +48,7 @@ export async function searchBooks(query) {
     results = mockSearch;
   } else {
     results = await queryApi(url);
-    results = results.docs.slice(0, 30)
+    results = results.docs.slice(0, API_MAX_RESULTS)
   }
   return results;
 

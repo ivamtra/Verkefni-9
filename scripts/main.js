@@ -56,4 +56,3 @@ window.onpopstate = () => {
 
 // Athugum í byrjun hvað eigi að birta.
 route();
-renderFrontpage(main)
